@@ -1,5 +1,16 @@
 <template>
+
   <view>
+    <mysearch>
+      <view class="my-search-container">
+        <!-- 使用 view 组件模拟 input 输入框的样式 -->
+        <view class="my-search-box">
+          <uni-icons type="search" size="17"></uni-icons>
+          <text class="placeholder">搜索</text>
+        </view>
+      </view>
+    </mysearch>
+
     <view class="scroll-view-container">
       <!-- 左侧的滚动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -14,10 +25,10 @@
           <!-- 动态渲染三级分类的列表数据 -->
           <view class="cate-lv3-list">
             <!-- 三级分类 Item 项 -->
-            
+
             <view class="cate-lv3-item" v-for="(item3, i3) in item2.children" :key="i3" @click="gotoGoodsList(item3)">
               <!-- 图片 -->
-             <image :src="item3.cat_icon.replace('dev','web')" mode="widthFix"/>
+              <image :src="item3.cat_icon.replace('dev','web')" mode="widthFix" />
               <!-- 文本 -->
               <text>{{item3.cat_name}}</text>
             </view>
@@ -50,6 +61,7 @@
       this.wh = sysInfo.windowHeight
       // 调用获取分类列表数据的方法
       this.getCateList()
+
     },
     methods: {
       async getCateList() {
@@ -69,10 +81,10 @@
         // 为二级分类列表重新赋值
         this.cateLevel2 = this.cateList[i].children
         // 让 scrollTop 的值在 0 与 1 之间切换
-          this.scrollTop = this.scrollTop === 0 ? 1 : 0
-        
-          // 可以简化为如下的代码：
-          // this.scrollTop = this.scrollTop ? 0 : 1
+        this.scrollTop = this.scrollTop === 0 ? 1 : 0
+
+        // 可以简化为如下的代码：
+        // this.scrollTop = this.scrollTop ? 0 : 1
       },
       // 点击三级分类项跳转到商品列表页面
       gotoGoodsList(item3) {
@@ -80,8 +92,8 @@
           url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
         })
       }
-  
-      
+
+
     }
   }
 </script>
@@ -147,6 +159,29 @@
       text {
         font-size: 12px;
       }
+    }
+  }
+
+  .my-search-container {
+    background-color: #c00000;
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .my-search-box {
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .placeholder {
+      font-size: 15px;
+      margin-left: 5px;
     }
   }
 </style>
