@@ -6,11 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:vsdeveloper/uni-shop2.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dcloudio/uni-ui": "^1.4.26",
     "@escook/request-miniprogram": "^0.2.1"
   }
 }

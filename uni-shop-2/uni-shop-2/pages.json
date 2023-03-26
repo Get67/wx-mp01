@@ -17,19 +17,26 @@
     "pages": [{
       "path": "goods_detail/goods_detail",
       "style": {}
-    }    ,{
-                    "path" : "goods_list/goods_list",
-                    "style" : {}
-                }
-            ]
+    }, {
+      "path": "goods_list/goods_list",
+      "style": {
+        "onReachBottomDistance": 150,
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#F8F8F8"
+      }
+    }, {
+      "path": "search/search",
+      "style": {}
+    }]
   }],
   "globalStyle": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "微信优购",
+    "navigationBarTitleText": "黑马优购",
     "navigationBarBackgroundColor": "#C00000",
     "backgroundColor": "#FFFFFF"
   },
   "tabBar": {
+    "selectedColor": "#C00000",
     "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",

@@ -1,23 +1,15 @@
 {
   "description": "项目配置文件。",
   "packOptions": {
-    "ignore": [],
-    "include": []
+    "ignore": []
   },
   "setting": {
     "urlCheck": true,
-    "postcss": false,
-    "checkSiteMap": false,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "condition": false
+    "checkSiteMap": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.30.3",
-  "appid": "wx493c9c8a38a1665e",
+  "libVersion": "",
+  "appid": "wx5eda4566d93729d6",
   "projectname": "uni-shop-2",
   "condition": {
     "search": {
@@ -36,9 +28,5 @@
       "current": -1,
       "list": []
     }
-  },
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
   }
 }

@@ -10,17 +10,19 @@
       "root": "subpkg",
       "pages": [
         "goods_detail/goods_detail",
-        "goods_list/goods_list"
+        "goods_list/goods_list",
+        "search/search"
       ]
     }
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "微信优购",
+    "navigationBarTitleText": "黑马优购",
     "navigationBarBackgroundColor": "#C00000",
     "backgroundColor": "#FFFFFF"
   },
   "tabBar": {
+    "selectedColor": "#C00000",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -48,5 +50,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap91.json"
 }
